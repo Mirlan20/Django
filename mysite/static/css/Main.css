@@ -1,0 +1,138 @@
+body{
+
+	background-color: #19B8B1;
+	background-repeat: no-repeat;
+}
+#logos{
+	
+	background-color: 	#4C84AA;
+	width:1300px;
+	padding: 20px 20px 0px 20px;
+	float: top;
+}
+#category{
+	
+
+	width:1290px;
+	color:white;
+	padding: 20px 20px 20px 20px;
+	background-color:#4C84AA;
+	margin-left:5px;
+	margin-top:2px;
+	text-align: left;
+	line-height: 2.5;
+	float: left;
+}
+#sign{
+	float:right;
+}
+.category-icons{
+	color: #4C84AA;
+	border:1px solid #19B8B1;
+	background-color: #81BBC0;
+	width:200px;
+	padding: 5px;
+	margin-left: 40px;
+	text-align: center;
+	float:left;
+}
+#category{
+	width:1290px;
+	color:white;
+	padding: 20px 20px 20px 20px;
+	background-color:#4C84AA;
+	margin-left:5px;
+	margin-top:2px;
+	text-align: left;
+	line-height: 2.5;
+	float: left;
+}
+#home-page{
+	line-height: 1.9em;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #444444;
+  border: 1px dashed white;
+  background-color: #a7cece;
+  padding: 25px;
+  padding-left: 80px;
+  margin: 30px;
+  float: left;
+}
+.condition{
+	border:1px solid #007e7e;
+	background-color: #81BBC0;
+	width:350px;
+	padding: 5px;
+	margin-left:10px;
+	margin-top: 10px;
+	text-align: center;
+	float:left;
+}
+#jat-foto{
+	border: 4px dashed #19B8B1;
+	background-color: #81BBC0;
+	width:1090px;
+	padding: 5px;
+	margin-left:10px;
+	margin-top: 10px;
+	text-align: center;
+	float:center;
+}
+#first{
+			width:130px;
+			border-style: solid;
+			margin: 10px;
+			margin-top: 20px;
+			padding: 10px;
+			border-width: 2px;
+			border-color: blue;
+			background-color: #81BBC0;
+			color:blue;
+			float:right;
+		}
+		#second{
+			width: 200px;
+			border-style: solid;
+			margin: 10px;
+			padding: 10px;
+			background-color: #81BBC0;
+			float:right;
+		}
+		#result{
+			width:200px;
+			border-style: solid;
+			margin: 10px;
+			padding: 10px;
+			border-width: 2px;
+			border-color: blue;
+			background-color: #81BBC0; 
+			color:blue; 
+			float:right;
+}
+#my_timer{
+	width:300px;
+			height:25px;
+			border-style: solid;
+			margin-top: 20px;
+			margin-right: 70px;
+			padding: 10px;
+			border-width: 2px;
+			border-color: blue;
+			background-color: #81BBC0; 
+			color:blue; 
+			float:right;
+			text-align: center;
+}
+#cal{
+      border: 4px dashed #19B8B1;
+      background-color: #81BBC0;
+      width: 200px;
+      margin-right: 70px; 
+      padding: 10px;
+      float:right;
+    }
+    .buttons{
+      width:40px;
+      height:30px;
+    }

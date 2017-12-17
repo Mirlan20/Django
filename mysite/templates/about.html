@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% block body %}
+<!Doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		ТУНГУЧ ЖАТАКАНАСЫ
+	</title>
+	<script type="text/javascript">
+		function replace( hide, show ) {
+  document.getElementById(hide).style.display="none";
+  document.getElementById(show).style.display="block";
+}
+function answer() {
+    var fname = document.getElementById('first_name').value;
+    var lname = document.getElementById('last_name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+ 
+    var html = 'Урматтуу ' + fname + '</b>' + ' сиздин катыныз кабыл алынды!'; 
+ 
+    document.getElementById('result').innerHTML = html;
+}
+function timer(){
+var obj=document.getElementById('timer_inp');
+obj.innerHTML--;
+    if (obj.innerHTML==0){
+        alert('Биздин жаны сайтка кош келиниз!. Бизде жаны озгоруулор жана толуктоолор бар: эми бизге кат жазсаныз болот жана онлайн калькулятор колдонсонуз болот.');
+        setTimeout(function(){},500);
+    } else {
+        setTimeout(timer,500);
+    }
+}
+setTimeout(timer,1000);
+function my_fun(sym){
+      var num1 = document.getElementById('f_number').value;
+      var num2 = document.getElementById('s_number').value;
+
+      switch(sym)
+      {
+        case '+':
+        var answer = parseInt(num1) + parseInt(num2);
+        break;
+        case '-':
+        var answer = parseInt(num1) - parseInt(num2);
+        break;
+        case '*':
+        var answer = parseInt(num1) * parseInt(num2);
+        break;
+        case '/':
+        var answer = parseInt(num1) / parseInt(num2);
+        break;
+      }
+
+            document.getElementById('cal_result').innerHTML = answer;
+       
+    }
+	</script>
+</head>
+<body>
+	<div id="logos"><img src="../static/images/logo.jpg" alt="tunguch_logo"><img src="../static/images/logo2.png" alt="tunguch_logo2">
+		<div id="sign">
+             <a href="{% url 'register' %}"><img src="../static/images/logo4.png" alt="tunguch_logo3">
+		</a>
+		<a href="{% url 'login' %}"><img src="../static/images/logo3.png" alt="tunguch_logo3">
+		</a>
+	</div>
+	</div>
+	<div id="category">
+		<a href="/">
+		<div class="category-icons">
+			Башкы бет
+		</div>
+	</a>
+	<a href="/news">
+		<div class="category-icons">
+			Жанылыктар
+		</div>
+	</a>
+		<a href="/life">
+		<div class="category-icons">
+			Жатаканадагы жашоо
+		</div>
+	</a>
+	<a href="/kurs">
+		<div class="category-icons">
+			Конкурстар
+		</div>
+	</a>
+	<a href="/about">
+		<div class="category-icons">
+			Биз жонундо
+		</div>
+	</a>
+	</div>
+	<div id="home-page">
+		<h1>Биз жонундо</h1>
+		<p>
+			Тунгуч жатаканасы 2015-жылы ачылган. Жатакананын негизги максаты студенттердин окуусуна жакшы шарт тузуп беруу. Студенттер жалан гана окубастан ар кандай конкурстарга жана пайдалуу семинарларга катыша алышат. Ошондой эле алар саякатка чыгууга мумкунчулуктору бар.
+			</p>
+			<h2>
+			Бизди картадан тапсаныз болот.
+			</h2>
+		<div id="jat-foto">
+		<img src="../static/images/map.png">
+		</div> 
+		<h3>Биздин дарек: ул.Исакеева а/2.
+		</h3>
+		<h3>
+			Байланыш учун телефондор: 0550 104 585.
+		</h3>
+		<h3>Ошондой эле бизди фейсбук жана одноклассниктен таба аласыздар: </h3>
+		<a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=5&cad=rja&uact=8&ved=0ahUKEwi7joiqqMnWAhWpCJoKHVbuC4YQFgg5MAQ&url=https%3A%2F%2Fwww.facebook.com%2Fdirectory%2Fpages%2Fothers-7006246-7006265&usg=AFQjCNHiSmmscyXMF1d4ruz4d-_ihWIENQ">
+            <img src="../static/images/fb.png">
+		</a>
+		<a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwi7joiqqMnWAhWpCJoKHVbuC4YQFggmMAA&url=https%3A%2F%2Fok.ru%2Fprofile%2F571863465029&usg=AFQjCNF99anyxs62CXjoSwJ8BuYwF0F4zA">
+		<img src="../static/images/ok.png">
+		
+	</a>
+	<div id = "first" style="display:block" onclick = "replace('first','second')">Бизге жазыныз</div>
+<div id = "second" style="display:none" ><p>Атыныз: <input id="first_name"></p>
+<p>Фамилияныз: <input id="last_name"></p>
+<p>Почтаныз: <input id="email"></p>
+<p>Катыныз: <input id="message"></p>
+<p><button onclick="answer(), replace('second','result')">Жонотуу</button></p>
+</div>
+<div id="result" style="display:none"></div>
+<div id="my_timer">Кабарга убакыттын калганы: <span id="timer_inp">10</span> сек.</div>
+<div id="cal">
+<p>Введите первый номер: <input id="f_number"></p>
+<p>Введите второй номер: <input id="s_number"></p>
+<p><button class="buttons" onclick="my_fun('+')">+</button>
+<button class="buttons" onclick="my_fun('-')">-</button>
+<button class="buttons" onclick="my_fun('*')">*</button>
+<button class="buttons" onclick="my_fun('/')">/</button></p>
+
+<p id="cal_result">Результат</p>
+</div>
+	</div>
+	</body>
+</html>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block body %}
+<!Doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		ТУНГУЧ ЖАТАКАНАСЫ
+	</title>
+</head>
+<body>
+	<div id="logos"><img src="../static/images/logo.jpg" alt="tunguch_logo"><img src="../static/images/logo2.png" alt="tunguch_logo2">
+		<div id="sign">
+             <a href="{% url 'register' %}"><img src="../static/images/logo4.png" alt="tunguch_logo3">
+		</a>
+		<a href="{% url 'login' %}"><img src="../static/images/logo3.png" alt="tunguch_logo3">
+		</a>
+	</div>
+	</div>
+	<div id="category">
+		<a href="/">
+		<div class="category-icons">
+			Башкы бет
+		</div>
+	</a>
+		<a href="/news">
+		<div class="category-icons">
+			Жанылыктар
+		</div>
+	</a>
+		<a href="/life">
+		<div class="category-icons">
+			Жатаканадагы жашоо
+		</div>
+	</a>
+	<a href="/kurs">
+		<div class="category-icons">
+			Конкурстар
+		</div>
+	</a>
+	<a href="/about">
+		<div class="category-icons">
+			Биз жонундо
+		</div>
+	</a>
+	</div>
+	<div id="home-page">
+		<h1>Жатаканадагы жашоо</h1>
+		<div id="jat-foto">
+		<img src="../static/images/r1.JPG">
+		<img src="../static/images/r2.JPG">
+		<h2>Студенттердин болмолору.</h2>
+		</div>
+		<div id="jat-foto">
+		<img src="../static/images/k1.JPG">
+		<img src="../static/images/k2.JPG">
+		<img src="../static/images/k3.JPG">
+		<h2>Кухня</h2>
+		</div>
+		<div id="jat-foto">
+		<img src="../static/images/es1.jpg">
+		<img src="../static/images/es2.jpg">
+		<h2>Эс алуучу болмо</h2>
+		</div>
+		<div id="jat-foto">
+		<img src="../static/images/cl1.JPG">
+		<img src="../static/images/cl2.JPG">
+		<img src="../static/images/cl3.JPG">
+		<h2>Сабак окуучу болмо</h2>
+		</div>
+		<div id="jat-foto">
+		<img src="../static/images/s1.jpg">
+		<img src="../static/images//s5.jpg">
+		<img src="../static/images/s3.jpg">
+		<img src="../static/images/s4.jpg">
+		<img src="../static/images/s2.jpg">
+		<img src="../static/images/s7.jpg">
+		<h2>2016-17-жылдары жашаган студенттердин жашоосу</h2>
+		</div>
+	</div>
+	</body>
+</html>
+{% endblock %}

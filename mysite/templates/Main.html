@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block body %}
+<!Doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		ТУНГУЧ ЖАТАКАНАСЫ
+	</title>
+</head>
+<body>
+	<div id="logos"><img src="../static/images/logo.jpg" alt="tunguch_logo"><img src="../static/images/logo2.png" alt="tunguch_logo2">
+		<div id="sign">
+            <a href="{% url 'register' %}"><img src="../static/images/logo4.png" alt="tunguch_logo4">
+		</a>
+		<a href="{% url 'login' %}"><img src="../static/images/logo3.png" alt="tunguch_logo3">
+		</a>
+	</div>
+	<div id="category">
+		<a href="/">
+		<div class="category-icons">
+			Башкы бет
+		</div>
+	</a>
+		<a href=/news>
+		<div class="category-icons">
+			Жанылыктар
+		</div>
+	</a>
+		<a href="/life">
+		<div class="category-icons">
+			Жатаканадагы жашоо
+		</div>
+	</a>
+	<a href="/kurs">
+		<div class="category-icons">
+			Конкурстар
+		</div>
+	</a>
+	<a href="/about">
+		<div class="category-icons">
+			Биз жонундо
+		</div>
+	</a>
+	</div>
+	<div id="home-page">
+		<h1 align=center>Кош келиниздер</h1>
+		<div id="jat-foto">
+		<img src="../static/images/j1.JPG">
+		<img src="../static/images/j3.JPG">
+		<img src="../static/images/j1-2.jpg">
+		</div>
+		<h2 align=center>Биздин жатакана 2015-жылдан тартып иштеп келет. Бизде студенттер учун баардык шарттар бар:
+		</h2>
+		<div class="condition">
+			<img src="../static/images/u1.png">
+			<h3>Ынгайлуу уктоочу болмлолор</h3>
+		</div>
+		<div class="condition">
+			<img src="../static/images/u2.png">
+			<h3>24 саат ысык жана муздак суу(душ)</h3>
+		</div>
+		<div class="condition">
+			<img src="../static/images/u3.png">
+			<img src="../static/images/u3-2.png">
+			<h3>24 саат бою козомол кызматы иштейт</h3>
+		</div>
+		<div class="condition">
+			<img src="../static/images/u4.png">
+			<h3>Wi-Fi роутерлер бар</h3>
+		</div>
+		<div class="condition">
+			<img src="../static/images/u5.png">
+			<img src="../static/images/u8.png">
+			<h3>Сабак окуучу класс бар.</h3>
+		</div>
+		<div class="condition">
+			<img src="../static/images/u6.png">
+			<img src="../static/images/u6-3.png">
+			<h3>Телевизор</h3>
+		</div>
+		<div class="condition">
+			<img src="../static/images/u7.png">
+			<h3>Кирлериниздерди жууп беришет</h3>
+		</div>
+		<div class="condition">
+			<img src="../static/images/u11.png">
+			<img src="../static/images/u9.png">
+			<h3>Саякатка чыгуу</h3>
+		</div>
+		<div class="condition">
+			<img src="../static/images/u10.png">
+			<h3>Тамак-аш</h3>
+		</div>
+		</div>
+	</div>
+	</body>
+</html>
+{% endblock %}

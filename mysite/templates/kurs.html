@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block body %}
+<!Doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		ТУНГУЧ ЖАТАКАНАСЫ
+	</title>
+	<link type="text/css" rel="stylesheet" href="Main.css">
+</head>
+<body>
+	<div id="logos"><img src="../static/images/logo.jpg" alt="tunguch_logo"><img src="../static/images/logo2.png" alt="tunguch_logo2">
+		<div id="sign">
+             <a href="{% url 'register' %}"><img src="../static/images/logo4.png" alt="tunguch_logo3">
+		</a>
+		<a href="{% url 'login' %}"><img src="../static/images/logo3.png" alt="tunguch_logo3">
+		</a>
+	</div>
+	</div>
+	<div id="category">
+		<a href="/">
+		<div class="category-icons">
+			Башкы бет
+		</div>
+	</a>
+		<a href="/news">
+		<div class="category-icons">
+			Жанылыктар
+		</div>
+	</a>
+		<a href="/life">
+		<div class="category-icons">
+			Жатаканадагы жашоо
+		</div>
+	</a>
+	<a href="/kurs">
+		<div class="category-icons">
+			Конкурстар
+		</div>
+	</a>
+	<a href="/about">
+		<div class="category-icons">
+			Биз жонундо
+		</div>
+	</a>
+	</div>
+	<div id="home-page">
+		<h2>Конкурстарга катышуу учун каттоодон отуунуз керек-><div id="sign">
+		<a href="{% url 'login' %}"><img src="../static/images/logo3.png" alt="tunguch_logo3">
+		</a>
+        </div>
+        </h2>
+	</div>
+	</body>
+</html>
+{% endblock %}

@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block body %}
+<!Doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		ТУНГУЧ ЖАТАКАНАСЫ
+	</title>
+</head>
+<body>
+	<div id="logos"><img src="../static/images/logo.jpg" alt="tunguch_logo"><img src="../static/images/logo2.png" alt="tunguch_logo2">
+		<div id="sign">
+            <a href="{% url 'register' %}"><img src="../static/images/logo4.png" alt="tunguch_logo3">
+		</a>
+		<a href="{% url 'login' %}"><img src="../static/images/logo3.png" alt="tunguch_logo3">
+		</a>
+	</div>
+	</div>
+	<div id="category">
+		<a href="/">
+		<div class="category-icons">
+			Башкы бет
+		</div>
+	</a>
+		<a href="/news">
+		<div class="category-icons">
+			Жанылыктар
+		</div>
+	</a>
+		<a href="/life">
+		<div class="category-icons">
+			Жатаканадагы жашоо
+		</div>
+	</a>
+	<a href="/kurs">
+		<div class="category-icons">
+			Конкурстар
+		</div>
+	</a>
+	<a href="/about">
+		<div class="category-icons">
+			Биз жонундо
+		</div>
+	</a>
+	</div>
+	<div id="home-page">
+	<h2>Студенттердин таблицасы</h2>
+    <form>
+        <input type="text" required name="keyword" placeholder="Издоо">
+        <input type="submit" value="Издоо">
+    </form>
+        <div>
+        <table border="1">
+            <tr>
+                <th>#</th>
+                <th>Аты</th>
+                <th>Email</th>
+                <th>Мобильный</th>
+                <th>Рабочий</th>
+            </tr>
+        {% if contacts %}
+            {% for contact in contacts %}
+                <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.mobile }}</td>
+                <td>{{ contact.work }}</td>
+                </tr>
+            {% endfor %}
+        {% else %}
+        <tr>
+            <td colspan="6">Студент табылган жок</td>
+        </tr>
+        {% endif %}
+        </table>
+        </div>
+    </div>
+	</div>
+	</body>
+</html>
+{% endblock %}
